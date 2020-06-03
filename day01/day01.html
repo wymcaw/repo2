@@ -1,0 +1,1143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>day01</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+</head>
+<body>
+<p>花倩
+联系方式：微信：18612483268  </p>
+<h2>java基础 -- 知识点和面试题穿插进行</h2>
+<h3>java基础：</h3>
+<ol>
+<li>
+变量：
+<ol>
+<li>
+定义（声明和初始化）   数据类型  变量名 = value;
+<ol>
+<li>
+变量名的命名规范：  由数字，字母，_和$组成
+<ol>
+<li>不能以数字开头</li>
+<li>推荐使用英文，不推荐中文（可以）</li>
+<li>见名知意，驼峰命名法</li>
+<li>不能使用java中关键字</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>
+<p>数据类型：</p>
+<ol>
+<li>
+<p>基本数据类型：8种</p>
+<pre><code>byte           1字节
+short          2字节  
+int            4字节
+long           8字节
+float          4字节 -- 用的不是太多
+double         8字节
+char -- 字符   2字节
+boolean        1字节
+
+
+面试题：字符串&quot;java是种编程语言&quot;，在java内存中所占用的大小是（）字节    A   容易误选B,C
+        A. 20       B.16     C.22    D.10
+
+        解析：以上字符串中共有10个字符，而每个字符在内存中都占用2个字节，共占用20个字节
+        误选B，C的原因是什么：
+            编码UTF-8，一个中文占用3个字节，一个英文占用1个字节的，占用22个字节
+            编码GBK，一个中文占用2个字节，一个英文占用1个字节的，占用16个字节
+
+
+1. 数据类型间的转换
+    1. 自动转换（隐式转换）  --- 小转大，自动转
+        1. byte--&gt;short--&gt;int--&gt;long--&gt;float--&gt;double    boolean
+        2. char--&gt;int    
+    2. 强制转换（显式转换）  --- 大转小，强制转
+        1. 与以上的转换相反
+        2. 格式：(类型)byte b = (byte)a;
+
+    3. 强调点：
+
+        char c = 'a';
+        byte b = c;    //不可以 必须强制转换
+
+        byte b1 = 1;
+        c = b1;    //不可以，必须强转转换
+
+        byte类型和short类型，若想和char类型进行转换，都必须强制转换
+        byte，short，char都可以自动转换为int类型
+2. 不同数据类型间的运算问题
+    1. 不同类型间进行运算，最终的运算结果一定是和最大类型保持一致。
+    2. byte,short,char和int类型进行运算，最终结果一定是int类型，若想将结果赋值给byte，short，char，都必须强制转换
+</code></pre>
+
+</li>
+<li>
+引用类型：java中所有的数据类型，除了基本数据类型外，其他的都是引用类型
+<ol>
+<li>
+常见的引用类型：     
+
+<ol>
+<li>数组   int[] ary = new int[4];</li>
+<li>类  自定义类/java已经定义好的类作为类    String str = &quot;abc&quot;;</li>
+<li>抽象类，接口</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>
+<p>数组：</p>
+<ol>
+<li>
+声明
+<ol>
+<li>int[] ary;</li>
+<li>int ary[]; --不常用 ， 在底层代码的时候可能会见到</li>
+</ol>
+</li>
+<li>
+<p>初始化</p>
+<ol>
+<li>int[] ary = {1,2,3};</li>
+<li>
+int[] ary = new int[4];   -- 数组中的每个元素都有默认值
+<ol>
+<li>
+数组中元素的默认值是什么取决于数组的类型：
+<ol>
+<li>类型是int[]   默认是0</li>
+<li>类型是double[]   默认值：0.0</li>
+<li>类型是引用类型  String[]   默认值为null</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>int[] ary = new int[]{1,3};   --不常用</li>
+</ol>
+</li>
+<li>
+<p>遍历--for循环</p>
+</li>
+<li>
+<p>引用类型数组 -- 二维数组</p>
+<ol>
+<li>
+<p>int[][] ary = new int[2][3];</p>
+<p><img src="1.png" /></p>
+</li>
+<li>int[][] ary = {{1,2},{3,4,5},{6,7,8,9}};    
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>
+<p>运算符</p>
+<ol>
+<li>
+<p>强调点：+=  -=</p>
+<ol>
+<li>
+<p>题目：  
+</p>
+<pre><code>byte b = 1;
+byte c = b+1;   //是否正确
+    错误，原因：byte类型和1（int类型）进行运算，结果是int类型，若想转换为byte，需要强转
+
+b += 1;    //是否正确   
+    正确，+=运算符自带强转功能，本质是在编译过程中转换  编译过程中代码转换为  b = (byte)(b+1);
+
+------11:05上课
+</code></pre>
+
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>
+<p>分支</p>
+<ol>
+<li>
+<p>if  ...else  分支</p>
+<ol>
+<li>if...分支</li>
+<li>if...else if...else if...else...</li>
+<li>if...else分支</li>
+</ol>
+</li>
+<li>
+<p>switch分支</p>
+<ol>
+<li>
+<p>格式：</p>
+<p>switch(val/表达式){   --类型：int，String，枚举类型
+	case  val:
+		.....
+		break;  ---强调点  ，可以不加，但是若不加，本条分支执行之后，顺序执行后面的分支，而不会跳出分支结构。
+	case val:
+		...
+		break;
+	.....
+	default:
+		.....
+		break;
+}</p>
+</li>
+</ol>
+</li>
+<li>
+break关键字：
+<ol>
+<li>作用在分支结构中，表示跳出分支。</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>
+<p>循环</p>
+<ol>
+<li>while循环</li>
+<li>
+do..while循环
+<ol>
+<li>
+强调点:以上2种循环的区别：
+<ol>
+<li>while循环是先判断，后执行</li>
+<li>do...while循环是先执行后判断，  ---循环体至少会执行1遍</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>
+<p>for循环 --使用频率最高的</p>
+<ol>
+<li>for(初始化;判断条件;迭代)</li>
+</ol>
+</li>
+<li>
+<p>强调点：三种循环---死循环</p>
+<ol>
+<li>while(true){....}</li>
+<li>do{...}while(tru);</li>
+<li>for(;;)</li>
+</ol>
+</li>
+<li>
+<p>break,continue关键字</p>
+<ol>
+<li>
+<p>break:</p>
+<ol>
+<li>可以作用在分支结构中，表示跳出分支</li>
+<li>可以作用在循环中，表示跳出当前循环</li>
+</ol>
+</li>
+<li>
+<p>cotinue：</p>
+<ol>
+<li>作用在循环中，表示跳出本次循环，继续下次循环</li>
+</ol>
+<p>题目：
+	for(int i=0;i&lt;5;i++){
+		for(int j=0;j&lt;=i;j++){
+			if(j==3){
+				break;
+			}
+			System.out.print(j); 
+		}
+		System.out.println(i); 
+	}</p>
+<p>0  0
+0  1  1
+0  1  2  2
+0  1  2  3
+0  1  2  4</p>
+<p>for(int i=0;i&lt;5;i++){
+	for(int j=0;j&lt;=i;j++){
+		if(j==3){
+			continue;
+		}
+		System.out.print(j); 
+	}
+	System.out.println(i); 
+}
+结果：
+0  0
+0  1  1
+0  1  2  2
+0  1  2  3
+0  1  2  4  4</p>
+</li>
+</ol>
+<p>题目：所谓“水仙花”数是一个三位数的整数，该整数等于各个位上的数字立方之和，例如：153=1<em>1</em>1+5<em>5<em>5+3</em>3</em>3，下面的程序用于输出100-1000内的水仙花数：</p>
+<pre><code>for(int n=100；n&lt;=1000;n++){
+    空白处
+    if(s==n){
+        System.out.println(n);
+    }
+}
+
+下列选项中，空白处可以填入的代码是（AC）
+A. int s=0,n1=n;  while(n1&gt;0){int t=n1%10;  s+= t*t*t; n1/=10;}
+B. int s=0,n1=n;  while(n1&gt;0){int t=n1/10;  s+= t*t*t; n1%=10;}
+C. int s=0;  for(int n1=n;n1&gt;0;n1/=10){int t = n1%10; s+=t*t*t;}
+D. int s=0;  for(int n1=n;n1&gt;0;n1%=10){int t = n1/10; s+=t*t*t;}
+
+注意：for循环中结构中三部分的执行顺序
+</code></pre>
+
+</li>
+</ol>
+</li>
+<li>
+<p>方法</p>
+<ol>
+<li>
+<p>结构：</p>
+<ol>
+<li>
+<p>访问控制修饰符  返回值类型  方法名(参数列表){方法体}</p>
+<p>public int getAge(int a){
+	System.out.println(a);
+	return a;
+}</p>
+</li>
+</ol>
+</li>
+<li>
+<p>强调点：问：java中的参数传递是值传递还是引用传递？</p>
+<ol>
+<li>
+<p>java中的所有参数传递都是值传递   ---java中明确给出的定义。</p>
+<p>class Test{
+	public void test(){
+		int a = 3;
+		demo(a);
+		String str = &quot;abc&quot;;
+		demo1(str);
+	}
+	public void demo(int a){
+		....
+	}
+	public void demo1(String str1){...}  将对象的地址的值传递过来</p>
+<p>}</p>
+<p><img src="2.png" /></p>
+</li>
+</ol>
+</li>
+<li>
+<p>练习题： -- 可变参数  int...is</p>
+<pre><code>下列程序
+
+class Test{
+    public static void main(String[] args){
+        doSomething(1);
+        doSomething(1,2);
+    }
+    //插入代码处
+}
+
+在程序插入下列哪一行代码编译是正确的（BD）
+A. static void doSomething(int[] args){}
+B. static void doSomething(int...args){}
+C. static void doSomething(int...args,int x){}
+D. static void doSomething(int x,int...args){}
+
+可变参数：
+    格式：  数据类型...变量名
+注意点：
+    1. 若参数列表中有多个参数，那么可变参数一定是位于参数列表的最后
+    2. 参数列表中最多只能有一个可变参数
+    3. 可变参数的本质是数组，所以传参时，可以传递一个数组给可变参数
+    4. 因为可变参数的本质是数组，所以可变参数的访问和数组的访问方式相同
+</code></pre>
+
+</li>
+<li>
+<p>方法重载：over</p>
+</li>
+<li>
+<p>load</p>
+<ol>
+<li>
+规则：在一个类中，存在多个方法，方法名相同，参数列表不同，这些方法就构成了方法重载
+<ol>
+<li>注意：方法重载和方法的返回值类型以及访问控制修饰符无关。</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>
+<p>冒泡排序--重要 -- 重点掌握
+	1. 自己下来看，多写</p>
+</li>
+</ol>
+</li>
+</ol>
+<h2>OOP</h2>
+<h3>类和对象</h3>
+<ol>
+<li>类是一类事物的模板，对象是经由这个模板创建出来的一个具体实例。</li>
+<li>
+对象的创建：
+<ol>
+<li>new 类名();</li>
+<li>
+如何引用该对象，
+<ol>
+<li>类  引用 = new 类名();  之后就可以通过该引用来访问对象内部的数据。。。</li>
+<li>Person person = new Person();   person.属性/方法</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>
+<p>构造方法：</p>
+<ol>
+<li>
+<p>无参构造方法</p>
+<pre><code>class T{
+    public T(){}
+}
+</code></pre>
+
+</li>
+<li>
+<p>有参构造方法</p>
+<pre><code>class T{
+    private int a;
+    private String str;
+    public T(int a,String str){
+        this.a = a;
+        this.str = str;
+    }
+}
+</code></pre>
+
+</li>
+<li>
+<p>this:是一个引用，指向一个对象</p>
+<ol>
+<li>指向的调用当前方法的对象</li>
+<li>
+<p>通常在方法中可以省略不写,但是在有歧义的情况下，this不能省略（典型的案例：有参构造方法）</p>
+<pre><code>public class T{
+    int a;
+    public void test(){
+        a = 3;
+        System.out.println(ta);
+    }
+}
+</code></pre>
+
+</li>
+</ol>
+</li>
+<li>
+<p>注意点：</p>
+<ol>
+<li>若一个类中不显式的定义构造方法，默认该类有存在无参构造方法</li>
+<li>若一个类中显式的定义了有参构造方法，而没有显式的定义无参构造方法，此时，该类中不存在无参构造方法</li>
+<li>构造方法的作用：进行初始化的。</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h3>内存管理</h3>
+<ol>
+<li>方法区：保存的是所有类的信息，类中的方法的代码，static变量，static代码块</li>
+<li>
+栈：保存的是局部变量，方法参数列表中的参数（局部变量）
+<ol>
+<li>栈帧：内存为每个要执行的方法都会分配一块区域，用于保存该方法内部的所有局部变量，就叫做栈帧区域</li>
+<li>
+局部变量在内存中的生命周期：
+<ol>
+<li>当方法开始执行，局部变量创建，在方法执行过程中被使用，当方法执行结束，对应的栈帧区域随之销毁。</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>
+<p>堆：对象，实例变量（成员变量）</p>
+<ol>
+<li>
+<p>对象/实例变量在内存中的生命周期：</p>
+<ol>
+<li>当代码执行到创建对象时，在内存中创建，可以通过引用来使用对象中的数据和方法，当某对象没有任何引用指向时，表示该对象成为了垃圾，等待被GC回收，当GC回收之后，该对象被回收（销毁）。</li>
+</ol>
+<p>public class T{
+	public int a;//实例变量  问题：在外部如何访问a  --属于对象
+	static String str;</p>
+<pre><code>static{
+    .....//静态资源
+}
+public void test(){....}
+</code></pre>
+
+<p>}</p>
+<p>public class A{
+	main:
+		T t = new T();
+		t.a = ?;
+		System.out.println(t.a);
+}</p>
+<p>练习题：画出以下代码中数据在内存中的内存示意图：
+	public class Test{
+		main:
+			int a = 4;
+			String str = &quot;hello&quot;;
+			char[] chs = {'g','b','k'};
+			Test t = new Test();
+			t.change(a,str,chs);
+			System.out.println(a);   //4
+			.....(str);             //hello
+			.....(Arrays.toString(chs));  //a b k</p>
+<pre><code>    change(int a,String str,char[] chs){
+        a = 10;
+        str = &quot;world&quot;;
+        chs[0] = 'a';
+    }
+}
+</code></pre>
+
+<p><img src="3.png" /></p>
+</li>
+</ol>
+</li>
+<li>
+<p>GC：垃圾回收机制</p>
+<ol>
+<li>GC对程序员 来说是透明的，即程序员无法得知GC什么时候回收。</li>
+<li>
+System.gc() -- 建议GC来回收某对象	
+<ol>
+<li>
+finalize() -- 是Object类中的方法，该方法通常会被子类重写，用于对象销毁前做最后的资源清理。
+<ol>
+<li>即当GC销毁某对象时，会调用该对象内部的finalize方法，来做 最后的资源释放工作。	</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>
+内存溢出和内存泄漏的区别？
+<ol>
+<li>内存溢出：当JVM所能提供的内存不足以分配给请求的资源时，就会造成内存溢出。</li>
+<li>
+内存泄漏：当JVM的内存分配出去之后，没有回收回来，就造成内存泄漏。
+<ol>
+<li>关系：内存泄漏积累到一定程序会造成内存溢出。</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h3>继承</h3>
+<ol>
+<li>语法：  extends    class Sub  extends Super</li>
+<li>
+<p>继承的特点：</p>
+<ol>
+<li>单一性：java中的子类只能有一个父类</li>
+<li>传递性：class A extends B    B  extends  C   A类也继承了C 类中的内容</li>
+</ol>
+</li>
+<li>
+<p>重写：override</p>
+<ol>
+<li>是指在具有继承关系的父子类中，子类中对父类中的某个方法的方法体进行重新实现。</li>
+<li>
+<p>规则：2同2小1大</p>
+<ol>
+<li>方法名，参数列表必须相同</li>
+<li>方法的返回值类型  子类&lt;=父类</li>
+<li>方法抛出的异常类型   子类&lt;=父类</li>
+<li>方法的访问控制修饰类型   子类&gt;=父类</li>
+</ol>
+<p>重载和重写：
+	重载：同一个类中存在多个方法，方法名相同，参数列表不同，就构成重载，和方法的其他部分无关
+	重写：父子类中，存在方法名，参数列表必须相同，和其他部分也有关。</p>
+</li>
+<li>
+<p>可以通过父类类型的引用指向子类对象，也可以通过子类类型的引用指向子类对象，不论是父类类型还是子类类型的引用，若指向的子类对象，那么通过该引用调用到的方法一定是子类重写后的方法（调用的方法是被重写的）</p>
+<pre><code>class Person    class Student extends Person   student类中重写person类中的say()方法
+Student stu = new Student();
+Person per = new Student();  //向上造型
+per/stu.say() --重写后的方法
+</code></pre>
+
+</li>
+</ol>
+</li>
+<li>
+<p>继承中构造方法的调用问题：</p>
+<ol>
+<li>
+<p>若创建某子类对象，一定是先调用父类的构造方法，在执行子类的构造方法</p>
+<pre><code>class Super{
+    public Super(){
+        super();  //调用父类的无参构造方法
+        .....
+    }
+}
+
+class Sub extends Super{
+    public Sub(){}
+}
+
+main:
+    new Sub();
+</code></pre>
+
+</li>
+</ol>
+</li>
+</ol>
+<h4>题目--创建对象以及初始化的过程</h4>
+<pre><code>public class Super{
+    int a = 6;
+    public Super(){
+        test();     //调用的是子类的还是父类中的方法，看运行过程中创建的对象是谁。
+                    // Person per = new Student();   per.say();  //子类的，看对象在运行时是谁
+    }
+    public void test(){
+        System.out.println(a);
+    }
+
+}
+
+public class Sub extends Super{
+    int a = 8;
+    public Sub(){
+        super();
+        test();
+    }
+
+    public void test(){
+        System.out.println(a);   
+    }
+    public static void main(String[] args){
+        new Sub();
+    }
+}    
+</code></pre>
+
+<p><img src="4.png" /></p>
+<h3>static和final关键字</h3>
+<ol>
+<li>
+<p>static</p>
+<ol>
+<li>
+成员变量：静态成员变量
+<ol>
+<li>通过类名调用的，属于类的，保存在方法区的</li>
+<li>会在类加载时期完成初始化</li>
+</ol>
+</li>
+<li>
+方法：
+<ol>
+<li>属于类的，通过类名调用，方法代码保存在方法区</li>
+</ol>
+</li>
+<li>
+代码块：
+<ol>
+<li>static{代码。。。。。}</li>
+<li>使用场景：当一些代码是静态（不变）资源时，就可以用static来修饰</li>
+<li>执行时机：是在类加载时期执行的，程序启动一次，只执行一次。</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>
+<p>final：</p>
+<ol>
+<li>类：类不可以被 继承</li>
+<li>方法：方法不可以被重写</li>
+<li>
+变量：变量的值一旦初始化，值不可以改变。
+<ol>
+<li>final修饰的变量是成员变量还是局部变量？--二者都可以</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>
+<p>static和final可以共同修饰成员变量，此时成员变量就成为了常量。</p>
+<ol>
+<li>
+<p>常量的命名有规范：所有字母都 大写，且若由多个单词组成，用_隔开</p>
+<pre><code>static final int STUDENT_AGE=4;
+</code></pre>
+
+</li>
+</ol>
+</li>
+</ol>
+<h2>抽象和接口</h2>
+<ol>
+<li>
+抽象：abstract
+<ol>
+<li>修饰方法：抽象方法  --- 只有方法的声明，没有方法的实现（没有方法体）</li>
+<li>修饰类：抽象类 -- 为了将多个子类的共同内容提取出来，以供子类公用</li>
+<li>抽象类是用于继承的。</li>
+</ol>
+</li>
+<li>
+<p>抽象类和抽象方法的关系：</p>
+<ol>
+<li>若一个类中有抽象方法，那么这个类一定是抽象类；但若一个类是抽象类，该类中不一定有抽象方法。</li>
+<li>抽象类不可以被实例化，但是抽象类中是有构造方法的</li>
+</ol>
+</li>
+<li>
+<p>接口:interface</p>
+<ol>
+<li>实现方式：  implements</li>
+<li>用法：  class A  implements  interface B</li>
+<li>
+<p>接口中的成员：2种</p>
+<ol>
+<li>常量</li>
+<li>
+<p>抽象方法</p>
+<pre><code>注意点：
+    1. 接口中定义常量时，可以省略 public static  final，因为接口中默认提供了以上3个修饰符定义常量时可以写成  ：  int  STATE = 0;
+    2. 接口中定义抽象方法时，可以public abstract，因为接口默认提供，所以定义时可以写成
+        1. void  test();
+</code></pre>
+
+</li>
+</ol>
+</li>
+<li>
+<p>接口不可以被实例化的，接口中没有构造方法，没有变量，没有普通方法（暂时保留，后续版本中可以有）</p>
+</li>
+<li>
+注意点：
+<ol>
+<li>
+java中接口是多实现的，即一个类可以实现多个接口
+<ol>
+<li>class A implements interfaceA,interfaceB....</li>
+</ol>
+</li>
+<li>
+java中接口之间是可以继承的，且可以多继承。
+<ol>
+<li>interface A extends interfaceB,interfaceC....</li>
+</ol>
+</li>
+<li>
+某个类可以在继承父类的同时实现一个或多个接口，但是一定是继承在前，实现接口在后。
+<ol>
+<li>class A extends Super implements interfaceA,interfaceB....</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h4>内部类</h4>
+<ol>
+<li>
+<p>普通内部类：在外部类的内部定义一个类</p>
+<ol>
+<li>用途/意义：通常是服务于外部类的。</li>
+<li>
+<p>使用：通常会在外部类的某方法内部，或成员变量位置创建内部类对象</p>
+<pre><code>class Outter{
+//  InnerCls inner = new InnerCls();
+    int a = 8;
+    public void test(){
+        InnerCls inner = new InnerCls();
+        inner.b = 6;
+        inner.demo();
+    }
+    class InnerCls{
+        int b = 4;
+        public void demo(){....}
+
+    }
+}
+</code></pre>
+
+</li>
+<li>
+<p>内部类可以访问外部类的成员，包括私有成员</p>
+</li>
+</ol>
+</li>
+<li>
+<p>匿名内部类：</p>
+<ol>
+<li>用法：通常用于实现/继承java已经定义好的某个接口/抽象类/类</li>
+<li>使用时机：若创建的某个类的对象只在一个位置 使用，此时就可以定义成匿名内部类</li>
+<li>
+<p>语法：</p>
+<ol>
+<li>接口 引用 = new 接口(){</li>
+<li>重写接口中的抽象方法</li>
+<li>}</li>
+</ol>
+</li>
+<li>
+<p>Runnable接口 -- 线程中学习，内部有抽象方法run()</p>
+<pre><code>Runnable task = new Runnable() {
+
+    @Override
+    public void run() {
+        System.out.println(&quot;匿名内部类测试&quot;);
+    }
+};
+
+task.run();
+
+Foo foo = new Foo() {
+
+    @Override
+    public void demo() {
+        System.out.println(&quot;demo方法匿名测试&quot;);
+    }
+};
+
+foo.demo();
+</code></pre>
+
+</li>
+</ol>
+</li>
+<li>
+<p>lambda表达式：替换了一部分匿名内部类</p>
+<ol>
+<li>
+<p>当使用匿名内部类实现的接口是功能性接口时，可以使用lambda表达式</p>
+<ol>
+<li>功能性接口：当接口中只有一个抽象方法时，该接口就叫做功能性接口</li>
+</ol>
+</li>
+<li>
+<p>jdk1.8开始出现的新特性</p>
+</li>
+<li>
+语法：
+<ol>
+<li>
+()-&gt;{}    ():表示实现接口后重写的方法的参数列表   {}：表示重写的方法的方法体
+<ol>
+<li>若方法体中只有一行代码，此时，{}可以 省略</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->
